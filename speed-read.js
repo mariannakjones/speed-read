@@ -1,7 +1,7 @@
 var elements = document.querySelectorAll(`p, h1, h2, h3, h4, h5, h6, ul`);
 var hyperlinks = document.getElementsByTagName(`a`);
 
-
+// Edit all text in elements
 for (let i=0; i<elements.length; i++) {
     var text = elements[i].innerText;
     if (text !== ``) {
@@ -14,6 +14,7 @@ for (let i=0; i<elements.length; i++) {
     }
 }
 
+// Fix broken hyperlinks
 for (let i=0; i<hyperlinks.length; i++) {
     var regex = /<b>|<\/b>/g;
     var href = hyperlinks[i].getAttribute(`href`);
@@ -24,7 +25,7 @@ for (let i=0; i<hyperlinks.length; i++) {
     }
 }
 
-
+// Bold beginning of each string
 function boldString(str){
     switch(str.length){
         case 1:
