@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Speed Read",
+    "developer": {
+        "name": "Marianna Jones",
+        "url": "https://mariannajones.com/"
+    },
+    "version": "0.1",
+
+    "description": "Adds bolding to beginning of words to make artificial points for eyes to follow when reading",
+    
+    "icons": {
+        "48": "icons/read-48.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["speed-read.js"]
+        }
+    ]
+}
